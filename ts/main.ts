@@ -87,13 +87,17 @@ class SalesEmployee implements Employee {
 }
 
 function addEmployee(): void {
-  let employeeName = (<HTMLInputElement>document.getElementById('name')).value;
-  let surname = (<HTMLInputElement>document.getElementById('surname')).value;
-  let email = (<HTMLInputElement>document.getElementById('email')).value;
-  let birthDate = (<HTMLInputElement>document.getElementById('birthDate')).value;
-  let sdUnit = (<HTMLInputElement>document.getElementById('sdUnit')).value;
-  let zone = (<HTMLInputElement>document.getElementById('zone')).value;
 
+    // Obtener los valores del formulario
+    const employeeName = (document.getElementById("name") as HTMLInputElement).value;
+    const surname = (document.getElementById("surname") as HTMLInputElement).value;
+    const email = (document.getElementById("email") as HTMLInputElement).value;
+    const birthDate = new Date((document.getElementById("birthDate") as HTMLInputElement).value);
+    const sdUnit = (document.getElementById("sdUnit") as HTMLInputElement).value;
+    const zone = (document.getElementById("zone") as HTMLInputElement).value;
+  
+
+  // Creación de una instancia de SalesEmployee
   const salesEmployee = new SalesEmployee();
 
   salesEmployee.setNombre(employeeName);

@@ -58,12 +58,14 @@ var SalesEmployee = /** @class */ (function () {
 }());
 function addEmployee() {
     var _a, _b;
-    var employeeName = document.getElementById('name').value;
-    var surname = document.getElementById('surname').value;
-    var email = document.getElementById('email').value;
-    var birthDate = document.getElementById('birthDate').value;
-    var sdUnit = document.getElementById('sdUnit').value;
-    var zone = document.getElementById('zone').value;
+    // Obtener los valores del formulario
+    var employeeName = document.getElementById("name").value;
+    var surname = document.getElementById("surname").value;
+    var email = document.getElementById("email").value;
+    var birthDate = new Date(document.getElementById("birthDate").value);
+    var sdUnit = document.getElementById("sdUnit").value;
+    var zone = document.getElementById("zone").value;
+    // Creación de una instancia de SalesEmployee
     var salesEmployee = new SalesEmployee();
     salesEmployee.setNombre(employeeName);
     salesEmployee.setApellidos(surname);
